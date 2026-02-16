@@ -38,15 +38,21 @@ PHPUnit
 
 
 ⚙ Setup Instructions
-git clone <repo-url>
+git clone https://github.com/AdeDVictorious/pgoldapp.git
+
 cd pgoldapp
+
 composer install
+
 cp .env.example .env
+
 php artisan key:generate
+
 //cron job 
 php artisan queue:work
 
 cp .env.testing for test 
+
 //for testing purpose .i.e to run the test file
 php artisan test
 

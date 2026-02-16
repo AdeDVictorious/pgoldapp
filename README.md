@@ -2,8 +2,13 @@
 🟢 PGoldApp – Cryptocurrency Trading API
 Overview
 
+
+
+
 This is a RESTful cryptocurrency trading API built with Laravel 12.
 Users can:
+
+
 
 Register and authenticate
 
@@ -12,6 +17,9 @@ Manage a Naira wallet
 Buy and sell BTC, ETH, USDT
 
 View transaction history
+
+
+
 
 🛠 Tech Stack
 
@@ -24,6 +32,10 @@ Postgres
 CoinGecko API
 
 PHPUnit
+
+
+
+
 
 ⚙ Setup Instructions
 git clone <repo-url>
@@ -44,6 +56,11 @@ Configure database in .env
 php artisan migrate --seed
 php artisan serve
 
+
+
+
+
+
 🔐 Authentication
 
 Uses Laravel Sanctum.
@@ -58,6 +75,9 @@ POST /api/login
 
 Returns Bearer token.
 
+
+
+
 💰 Wallet System
 
 Each user has:
@@ -66,9 +86,13 @@ Each user has:
 
 3 crypto wallets (BTC, ETH, USDT)
 
+
 All wallet movements are tracked in wallet_transactions for all related naira transaction.
 
+
 All crypto wallet movements are tracked in trade for all related crypto transaction.
+
+
 
 📈 Trading Logic
 Buy Flow
@@ -97,6 +121,9 @@ Credit Naira wallet
 
 Record trade
 
+
+
+
 💸 Fee Structure
 
 2.5% fee on buy
@@ -107,10 +134,11 @@ Fee applied on Naira side
 
 Rounded to 4 decimal places
 
+
+
 🌍 CoinGecko Integration
 
-Integrated with
-CoinGecko
+Integrated with CoinGecko
 
 Free tier API used
 
@@ -125,6 +153,8 @@ API mocked in tests
 php artisan test
 
 
+
+
 Tests cover:
 
 Buy flow
@@ -133,9 +163,9 @@ Sell flow
 
 Insufficient balance
 
-External API failure
 
-Fee correctness
+
+
 
 📂 Architecture Decisions
 
@@ -146,6 +176,8 @@ Database transactions used for financial integrity
 Wallet transactions stored separately for audit trail
 
 Crypto balances stored independently from Naira wallet
+
+
 
 ⚖ Trade-offs
 
@@ -159,6 +191,8 @@ No Redis caching
 
 Basic exception handling 
 
+
+
 ⏱ Time Spent
 
 Approximately 25-35 hours.
@@ -166,6 +200,8 @@ Approximately 25-35 hours.
 
 
 Postman doc: https://documenter.getpostman.com/view/34843579/2sBXcBohwh 
+
+
 
 postman endpoint link : https://app.getpostman.com/join-team?invite_code=78197d0652b59d17c642d1215e7605bc73bbec00ace44c0119b4ec417b44bb22&target_code=eb0afa42e6df0958fc0cdc3ef866860c
 
